@@ -1,6 +1,7 @@
+import { Clock, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import React, { useState } from 'react';
+
 import { Reveal } from './ui/Reveal';
-import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ const Contact: React.FC = () => {
         e.preventDefault();
         
         // WhatsApp Configuration
-        const phoneNumber = "5215555555555"; 
+        const phoneNumber = "5215658491918"; 
         
         const text = `
 *CONSULTA RÁPIDA - HOME*
