@@ -1,42 +1,51 @@
 import React from "react";
 import { Reveal } from "./ui/Reveal";
 import { motion } from "framer-motion";
-import { Linkedin, Mail, ArrowRight } from "lucide-react";
+import { Mail, ArrowRight, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+
 import LuisImg from "../assets/luis_1.jpeg";
+import IUS from "../assets/iusticia.png";
+import KAT from "../assets/katya.jpeg";
+// Si usas imágenes locales, importa aquí:
+// import luisImg from "../assets/team/luis.jpg";
 
 const teamMembers = [
   {
     id: 1,
-    name: "Maestrante. Ernesto Ramirez",
+    name: "Maestrante Ernesto Ramírez",
     role: "Socio Fundador",
     specialty: "Derecho Penal",
     image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
+      IUS,
+    email: "ernestoramirez@iusticia.com.mx",
   },
   {
     id: 2,
-    name: "Lic.Luis Ramírez",
+    name: "Lic. Luis Ramirez",
     role: "Socio Fundador",
-    specialty: "Ingeniero en Sistemas",
-    image: LuisImg
-      ,
+    specialty: "Ingenería en Sistemas",
+    image:
+      LuisImg,
+    email: "luisramirez@iusticia.com.mx",
   },
   {
     id: 3,
-    name: "Lic. Martín Solares",
-    role: "Asociado",
-    specialty: "Derecho Civil",
-    image:
-      "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 4,
-    name: "Lic. Carmen Ortega",
+    name: "Lic. Katya Falcon",
     role: "Asociada",
     specialty: "Derecho Familiar",
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
+      KAT,
+    email: "contacto@iusticia.com.mx",
+  },
+  {
+    id: 4,
+    name: "Lic. Consuelo Aguilar",
+    role: "Abogada",
+    specialty: "Justicia Penal para Adoloscentes",
+    image: IUS
+      ,
+    email: "contacto@iusticia.com.mx",
   },
 ];
 
@@ -67,13 +76,12 @@ const Team: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 items-stretch">
           {teamMembers.map((member, index) => (
             <Reveal key={member.id} delay={index * 0.1}>
-              {/* Wrapper IMPORTANT para que nunca se “encoja” */}
               <div className="w-full h-full">
                 <motion.div
                   whileHover={{ y: -10 }}
                   className="group relative w-full min-w-0 h-full flex flex-col bg-gray-900 rounded-3xl overflow-hidden border border-gray-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl"
                 >
-                  {/* Imagen: alto fijo para que todas sean iguales */}
+                  {/* Imagen */}
                   <div className="h-[340px] relative overflow-hidden">
                     <img
                       src={member.image}
@@ -83,18 +91,33 @@ const Team: React.FC = () => {
 
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-90" />
 
-                    {/* Social Overlay: fade (más consistente) */}
+                    {/* Overlay botones */}
                     <div className="absolute inset-0 flex items-end justify-center pb-6 gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                      <button className="w-10 h-10 rounded-full bg-amber-500 text-black flex items-center justify-center hover:bg-white transition-colors shadow-lg">
-                        <Linkedin size={20} />
-                      </button>
-                      <button className="w-10 h-10 rounded-full bg-amber-500 text-black flex items-center justify-center hover:bg-white transition-colors shadow-lg">
-                        <Mail size={20} />
-                      </button>
+                      {/* Botón contacto */}
+                      <Link
+                        to="/contacto"
+                        className="w-10 h-10 rounded-full bg-amber-500 text-black flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+                        aria-label="Ir a contacto"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <MessageCircle size={20} />
+                      </Link>
+
+                      {/* Botón correo */}
+                      {member.email && (
+                        <a
+                          href={`mailto:${member.email}?subject=Consulta%20IUSTICIA`}
+                          className="w-10 h-10 rounded-full bg-amber-500 text-black flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+                          aria-label={`Correo de ${member.name}`}
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Mail size={20} />
+                        </a>
+                      )}
                     </div>
                   </div>
 
-                  {/* Texto: alto fijo para evitar que una crezca por 2 líneas */}
+                  {/* Texto */}
                   <div className="p-6 text-center relative z-10 bg-gray-900 border-t border-gray-800 h-[160px] flex flex-col justify-center">
                     <h3 className="text-xl font-bold text-white mb-1 leading-tight">
                       {member.name}
