@@ -3,10 +3,10 @@ import type { Stat } from '../types';
 import { useInView } from 'framer-motion';
 
 const stats: Stat[] = [
-    { id: 1, value: 25, label: "Años de Experiencia", suffix: "+" },
-    { id: 2, value: 5000, label: "Casos Ganados", suffix: "+" },
-    { id: 3, value: 98, label: "Satisfacción", suffix: "%" },
-    { id: 4, value: 50, label: "Abogados Expertos" },
+    { id: 1, value: 5, label: "Años de Experiencia", suffix: "+" },
+    { id: 2, value: 100, label: "Casos Ganados", suffix: "+" },
+    { id: 3, value: 99, label: "Satisfacción", suffix: "%" },
+    { id: 4, value: 5, label: "Abogados Expertos" },
 ];
 
 const Counter: React.FC<{ value: number; suffix?: string }> = ({ value, suffix }) => {

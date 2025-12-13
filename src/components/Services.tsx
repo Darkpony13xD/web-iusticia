@@ -8,11 +8,12 @@ import { motion } from 'framer-motion';
 
 const services: Service[] = [
     { id: 1, title: 'Derecho Civil', description: 'Asesoría integral en contratos, propiedad, herencias y resolución de conflictos civiles.', icon: Scale },
-    { id: 2, title: 'Derecho Corporativo', description: 'Estrategias legales para constitución de sociedades, fusiones y adquisiciones.', icon: Building2 },
+    { id: 2, title: 'Derecho Familiar', description: 'Gestión sensible de divorcios, custodia y pensiones con un enfoque humano.', icon: Users },
     { id: 3, title: 'Derecho Penal', description: 'Defensa penal rigurosa en todas las instancias procesales con absoluta discreción.', icon: Shield },
-    { id: 4, title: 'Derecho Familiar', description: 'Gestión sensible de divorcios, custodia y pensiones con un enfoque humano.', icon: Users },
-    { id: 5, title: 'Inmobiliario', description: 'Seguridad jurídica en compraventa, arrendamientos y desarrollo inmobiliario.', icon: Home },
     { id: 6, title: 'Derecho Laboral', description: 'Protección de intereses en contratos, despidos y negociaciones colectivas.', icon: Briefcase },
+    { id: 5, title: 'Inmobiliario', description: 'Seguridad jurídica en compraventa, arrendamientos y desarrollo inmobiliario.', icon: Home },
+    { id: 4, title: 'Derecho Mercantil', description: 'Asesoramiento integral para la vida de la empresa, contratos y obligaciones comerciales.', icon: Building2 },
+    
 ];
 
 const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
@@ -39,14 +40,15 @@ const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
     };
 
     return (
-        <motion.div
-            ref={ref}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            style={{ transformStyle: "preserve-3d" }}
-            animate={{ rotateX, rotateY }}
-            className="relative h-full bg-gradient-to-br from-gray-900 via-[#0f0f0f] to-black border border-gray-800 p-8 rounded-3xl group cursor-pointer overflow-hidden hover:border-amber-500/30 transition-all duration-300 shadow-xl"
-        >
+       <motion.div
+  ref={ref}
+  onMouseMove={handleMouseMove}
+  onMouseLeave={handleMouseLeave}
+  style={{ transformStyle: "preserve-3d" }}
+  animate={{ rotateX, rotateY }}
+  className="relative h-full min-h-[340px] bg-gradient-to-br from-gray-900 via-[#0f0f0f] to-black border border-gray-800 p-8 rounded-3xl group cursor-pointer overflow-hidden hover:border-amber-500/30 transition-all duration-300 shadow-xl"
+>
+
             {/* Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             

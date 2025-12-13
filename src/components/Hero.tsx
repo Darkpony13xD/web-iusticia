@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
                     transition={{ duration: 0.8, delay: 0.8 }}
                     className="text-xl md:text-3xl text-gray-300 font-light tracking-wide mb-6"
                 >
-                    Defendiendo tus derechos con excelencia
+                    SOLUCIONES LEGALES, RESULTADOS REALES.
                 </motion.p>
 
                 <motion.p 
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
                     transition={{ duration: 0.8, delay: 1 }}
                     className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed"
                 >
-                    Más de 25 años de experiencia brindando soluciones legales integrales con un equipo de profesionales altamente calificados.
+                    Más de 5 años de experiencia brindando soluciones legales integrales con un equipo de profesionales altamente calificados.
                 </motion.p>
 
                 <motion.div
@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
                         to="/contacto"
                         className="inline-block px-10 py-4 bg-gradient-to-r from-amber-600 to-amber-500 text-black font-bold rounded-full shadow-[0_0_20px_rgba(217,119,6,0.4)] hover:shadow-[0_0_30px_rgba(217,119,6,0.6)] transition-all hover:scale-105"
                     >
-                        Consulta Gratuita
+                        Consulta
                     </Link>
                 </motion.div>
             </div>
