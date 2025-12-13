@@ -48,7 +48,7 @@ const ContactPage: React.FC = () => {
         e.preventDefault();
         
         // WhatsApp Configuration
-        const phoneNumber = "525658491918"; // Reemplazar con el número real del despacho (código país + número)
+        const phoneNumber = "5215658491918"; // Reemplazar con el número real del despacho (código país + número)
         
         const text = `
 *NUEVA CONSULTA - SITIO WEB*
