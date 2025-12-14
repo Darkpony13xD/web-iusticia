@@ -52,7 +52,7 @@ ${formData.message}
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Contáctanos</h2>
                         <div className="h-1 w-24 bg-amber-500 mx-auto rounded-full mb-6"></div>
                         <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                            Estamos listos para defender tus derechos. Agenda tu consulta gratuita hoy.
+                            Estamos listos para defender tus derechos. Agenda tu consulta hoy.
                         </p>
                     </Reveal>
                 </div>
@@ -78,7 +78,7 @@ ${formData.message}
                                             </div>
                                             <div className="ml-4">
                                                 <p className="font-bold text-white text-lg">Visítanos</p>
-                                                <p className="text-gray-400">Av. Reforma 222, Piso 10<br />CDMX, México</p>
+                                                <p className="text-gray-400">Av. Floresta #90 Piso 1, Colonia Reforma <br/>Nezahualcóyotl, México</p>
                                             </div>
                                         </div>
 
@@ -88,7 +88,7 @@ ${formData.message}
                                             </div>
                                             <div className="ml-4">
                                                 <p className="font-bold text-white text-lg">Llámanos</p>
-                                                <p className="text-gray-400">+52 (55) 1234 5678</p>
+                                                <p className="text-gray-400">+52 (55) 5848-7608</p>
                                             </div>
                                         </div>
 
@@ -98,7 +98,7 @@ ${formData.message}
                                             </div>
                                             <div className="ml-4">
                                                 <p className="font-bold text-white text-lg">Escríbenos</p>
-                                                <p className="text-gray-400">contacto@iusticia.com</p>
+                                                <p className="text-gray-400">contacto@iusticia.com.mx</p>
                                             </div>
                                         </div>
                                     </div>
@@ -107,7 +107,7 @@ ${formData.message}
                                 <div className="mt-12 md:mt-0">
                                     <div className="flex items-center gap-3 text-gray-500 text-sm">
                                         <Clock className="w-4 h-4" />
-                                        <span>Lunes a Viernes: 9:00 - 19:00</span>
+                                        <span>Lunes a Viernes: 10:00 - 18:00 <br/>Sabados cita previa</span>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@ ${formData.message}
                                             value={formData.name}
                                             onChange={handleInputChange} 
                                             className="w-full bg-gray-900/50 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all" 
-                                            placeholder="Juan Pérez" 
+                                            placeholder="Tpu nombre" 
                                             required 
                                         />
                                     </div>
@@ -137,7 +137,7 @@ ${formData.message}
                                             value={formData.email}
                                             onChange={handleInputChange} 
                                             className="w-full bg-gray-900/50 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all" 
-                                            placeholder="juan@ejemplo.com" 
+                                            placeholder="Tú correo" 
                                             required 
                                         />
                                     </div>
@@ -154,7 +154,7 @@ ${formData.message}
                                     >
                                         <option value="" className="bg-gray-900">Seleccione el tipo de consulta</option>
                                         <option value="Civil" className="bg-gray-900">Derecho Civil</option>
-                                        <option value="Corporativo" className="bg-gray-900">Derecho Corporativo</option>
+                                        <option value="Corporativo" className="bg-gray-900">Derecho Mercantil </option>
                                         <option value="Penal" className="bg-gray-900">Derecho Penal</option>
                                         <option value="Familiar" className="bg-gray-900">Derecho Familiar</option>
                                     </select>
