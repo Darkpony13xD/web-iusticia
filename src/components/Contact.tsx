@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
         e.preventDefault();
         
         // WhatsApp Configuration
-        const phoneNumber = "5215658491918"; 
+        const phoneNumber = "5215658487608"; 
         
         const text = `
 *CONSULTA RÁPIDA - HOME*
@@ -125,7 +125,7 @@ ${formData.message}
                                             value={formData.name}
                                             onChange={handleInputChange} 
                                             className="w-full bg-gray-900/50 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all" 
-                                            placeholder="Tpu nombre" 
+                                            placeholder="Tú nombre" 
                                             required 
                                         />
                                     </div>
