@@ -7,7 +7,7 @@ import { Reveal } from './ui/Reveal';
 const faqs = [
     {
         question: "¿La primera consulta tiene costo?",
-        answer: "No, en IUSTICIA ofrecemos una primera evaluación de caso totalmente gratuita para determinar la viabilidad y estrategia a seguir."
+        answer: "La evaluación inicial y el análisis estratégico de su caso tienen un costo de $500 MXN. Este importe será totalmente bonificado y descontado del total de los honorarios profesionales si usted decide formalizar la contratación de nuestros servicios legales."
     },
     {
         question: "¿Qué documentos necesito para la primera cita?",
@@ -48,7 +48,7 @@ const ContactPage: React.FC = () => {
         e.preventDefault();
         
         // WhatsApp Configuration
-        const phoneNumber = "5215658491918"; // Reemplazar con el número real del despacho (código país + número)
+        const phoneNumber = "5215658487608"; // Reemplazar con el número real del despacho (código país + número)
         
         const text = `
 *NUEVA CONSULTA - SITIO WEB*
@@ -96,7 +96,7 @@ ${formData.message}
                                         <Phone size={24} />
                                     </div>
                                     <h3 className="text-white font-bold text-lg mb-1">Teléfono</h3>
-                                    <p className="text-gray-400">+52 (55) 1234-5678</p>
+                                    <p className="text-gray-400">+52 (56) 5848-7608</p>
                                     <p className="text-gray-500 text-sm mt-2">Atención 24/7 para emergencias penales.</p>
                                 </div>
                                 <div className="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-amber-500/50 transition-colors">
@@ -104,7 +104,7 @@ ${formData.message}
                                         <Mail size={24} />
                                     </div>
                                     <h3 className="text-white font-bold text-lg mb-1">Email</h3>
-                                    <p className="text-gray-400">contacto@iusticia.com</p>
+                                    <p className="text-gray-400">contacto@iusticia.com.mx</p>
                                     <p className="text-gray-500 text-sm mt-2">Respuesta en menos de 24 horas.</p>
                                 </div>
                                 <div className="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-amber-500/50 transition-colors">
@@ -112,36 +112,37 @@ ${formData.message}
                                         <MapPin size={24} />
                                     </div>
                                     <h3 className="text-white font-bold text-lg mb-1">Oficina Principal</h3>
-                                    <p className="text-gray-400">Av. Reforma 222, Piso 10</p>
-                                    <p className="text-gray-400">Ciudad de México, CDMX</p>
+                                    <p className="text-gray-400">Av. Floresta #90 Piso 1, Colonia Reforma</p>
+                                    <p className="text-gray-400">Nezahualcóyotl, México</p>
                                 </div>
                                 <div className="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-amber-500/50 transition-colors">
                                     <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-amber-500 mb-4">
                                         <Clock size={24} />
                                     </div>
                                     <h3 className="text-white font-bold text-lg mb-1">Horario</h3>
-                                    <p className="text-gray-400">Lun - Vie: 9:00 - 19:00</p>
+                                    <p className="text-gray-400">Lun - Vie: 10:00 - 18:00</p>
                                     <p className="text-gray-400">Sáb: Cita previa</p>
                                 </div>
                             </div>
                         </Reveal>
 
                         {/* Map Section */}
-                        <Reveal delay={0.2}>
-                            <div className="w-full h-80 bg-gray-800 rounded-3xl overflow-hidden border border-gray-700 relative group">
-                                {/* Google Maps Embed Placeholder - Using dark mode filter */}
-                                <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.5363065876304!2d-99.16520362409745!3d19.43260174068595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8cb1594955b%3A0x6d2319206775f0a0!2sPaseo%20de%20la%20Reforma%20222%2C%20Ju%C3%A1rez%2C%20Cuauht%C3%A9moc%2C%2006600%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1sen!2smx!4v1698765432100!5m2!1sen!2smx" 
-                                    width="100%" 
-                                    height="100%" 
-                                    style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }} 
-                                    allowFullScreen 
-                                    loading="lazy" 
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                ></iframe>
-                                <div className="absolute inset-0 pointer-events-none border-4 border-gray-800/50 rounded-3xl"></div>
-                            </div>
-                        </Reveal>
+<Reveal delay={0.2}>
+  <div className="w-full h-80 bg-gray-800 rounded-3xl overflow-hidden border border-gray-700 relative group">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.9973601399024!2d-98.98699808981779!3d19.369266981821127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e3002a0b26e7%3A0x46efd1eae895bd80!2sABOGADOS%20IUSTICIA!5e0!3m2!1ses-419!2smx!4v1765756692802!5m2!1ses-419!2smx"
+      width="100%"
+      height="100%"
+      style={{ border: 0, filter: "grayscale(100%) invert(92%) contrast(83%)" }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Ubicación ABOGADOS IUSTICIA"
+    />
+    <div className="absolute inset-0 pointer-events-none border-4 border-gray-800/50 rounded-3xl"></div>
+  </div>
+</Reveal>
+
                     </div>
 
                     {/* Right Column: Form */}
@@ -204,7 +205,7 @@ ${formData.message}
                                     >
                                         <option value="" className="text-gray-500">Seleccione una opción</option>
                                         <option value="Derecho Civil">Derecho Civil</option>
-                                        <option value="Derecho Corporativo">Derecho Corporativo</option>
+                                        <option value="Derecho Corporativo">Derecho Mercantil</option>
                                         <option value="Derecho Penal">Derecho Penal</option>
                                         <option value="Derecho Familiar">Derecho Familiar</option>
                                         <option value="Otro">Otro Asunto</option>
