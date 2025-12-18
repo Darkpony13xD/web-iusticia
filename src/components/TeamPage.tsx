@@ -17,9 +17,13 @@ const partners = [
     image: IUS,
     bio: "",
     credentials: [
-      "Doctorado en Derecho, Universidad Nacional",
-      "Maestría en Finanzas, Harvard Law School",
-      "Presidente de la Barra de Abogados (2018-2020)"
+      "Licenciatura en Derecho",
+      "Maestrante en Procesal Penal",
+      "Especialidad Juicios Orales",
+      "Con estudios en Especialidad Justicia Penal para Adolescentes",
+      "Pasante en Licenciatura en Administacion",
+      "Diversos diplomados en el nuevo codigo civil y familiar",
+      "Diplomado en Derechos Humanos, Amparo, Sistema Anticorrupción,entre otros",
     ],
     // ✅ CAMBIA ESTE CORREO
     email: "ernestoramirez@iusticia.com.mx",
