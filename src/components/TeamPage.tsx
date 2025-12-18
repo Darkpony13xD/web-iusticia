@@ -36,24 +36,33 @@ const partners = [
     image: LuisImg,
     bio: "",
     credentials: [
+      "Licenciatura en Ingenería en Sistemas Computacionales",
+      "Pasante en Derecho",
       "Maestria en Mercadotecnia",
-      "Maestria en Gestion de Talento Humano",
-      ""
+      "Maestria en Gestion de Talento Humano"
     ],
     // ✅ CAMBIA ESTE CORREO
     email: "luisramirez@iusticia.com.mx",
+  },
+  {
+    id: 3,
+    name: "Lic. Katya Falcon",
+    role: "Socia",
+    specialty: "Lic. en Derecho",
+    image: KAT,
+    bio: "",
+    credentials: [
+      "Licenciatura en Derecho",
+      "Especialidad en Materia Familiar y Juicios Orales"
+      
+    ],
+    // ✅ CAMBIA ESTE CORREO
+    email: "contacto@iusticia.com.mx",
   }
 ];
 
 const associates = [
-  {
-    id: 3,
-    name: "Lic. Katya Falcon",
-    role: "Asociada",
-    specialty: "Derecho Familiar",
-    image: KAT,
-    email: "contacto@iusticia.com.mx",
-  },
+  
   {
     id: 4,
     name: "Lic. Consuelo Aguilar",
@@ -72,6 +81,14 @@ const associates = [
   },
   {
     id: 6,
+    name: "",
+    role: "",
+    specialty: "",
+    image: IUS,
+    email: "contacto@iusticia.com.mx",
+  },
+  {
+    id: 7,
     name: "",
     role: "",
     specialty: "",
@@ -179,7 +196,7 @@ const TeamPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <Reveal width="100%">
             <div className="flex justify-between items-end mb-12">
-              <h2 className="text-3xl font-bold text-white border-l-4 border-amber-500 pl-4">Abogados Asociados</h2>
+              <h2 className="text-3xl font-bold text-white border-l-4 border-amber-500 pl-4">Equipo de Trabajo</h2>
               <p className="text-gray-500 hidden md:block">Excelencia en cada área de práctica</p>
             </div>
           </Reveal>
