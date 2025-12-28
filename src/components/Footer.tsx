@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const quickLinks = [
   { label: "Inicio", to: "/" },
@@ -42,8 +42,9 @@ const Footer: React.FC = () => {
           {/* Contacto */}
           <div>
             <h3 className="text-white font-bold mb-4">Contacto</h3>
-            <p className="text-gray-400">Tel: +52 (55) ...</p>
-            <p className="text-gray-400">Correo: contacto@...</p>
+            <p className="text-gray-400">Tel: +52 (56) 5848 - 7608</p>
+            <p className="text-gray-400">Tel: +52 (56) 5849 - 1918</p>
+            <p className="text-gray-400">Correo: contacto@iusticia.com.mx</p>
           </div>
         </div>
 
