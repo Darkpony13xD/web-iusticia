@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import AboutPage from './components/AboutPage';
@@ -9,6 +9,7 @@ import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import ServicesPage from './components/ServicesPage';
 import TeamPage from './components/TeamPage';
+import UnderConstruction from './components/UnderConstruction';
 
 // Helper component to scroll to top on route change, but handle hash links
 const ScrollToTop = () => {
@@ -30,6 +31,26 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   const location = useLocation();
+
+  // ✅ Opción C: “En construcción” hasta la fecha de apertura (CDMX)
+  const openDateMs = useMemo(() => new Date('2026-01-01T00:00:00-06:00').getTime(), []);
+  const [now, setNow] = useState(() => Date.now());
+
+  useEffect(() => {
+    if (now >= openDateMs) return;
+    const t = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(t);
+  }, [now, openDateMs]);
+
+  // ✅ Recomendación: cuando llegue la fecha, entra solo al sitio (Home)
+  useEffect(() => {
+    if (now >= openDateMs) {
+      window.location.replace('/');
+    }
+  }, [now, openDateMs]);
+
+  const showConstruction = now < openDateMs;
+  if (showConstruction) return <UnderConstruction />;
 
   const [showLoader, setShowLoader] = useState(false);
   const [fadingOut, setFadingOut] = useState(false);
