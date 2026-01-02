@@ -32,26 +32,23 @@ const ScrollToTop = () => {
 const App: React.FC = () => {
   const location = useLocation();
 
-  // ✅ Opción C: “En construcción” hasta la fecha de apertura (CDMX)
-  const openDateMs = useMemo(() => new Date('2026-01-01T00:00:00-06:00').getTime(), []);
+  // ✅ Fecha apertura CDMX
+  const openDateMs = useMemo(
+    () => new Date('2026-01-03T00:00:00-06:00').getTime(),
+    []
+  );
+
   const [now, setNow] = useState(() => Date.now());
 
+  // ✅ Mantener reloj (solo si aún no abre)
   useEffect(() => {
-    if (now >= openDateMs) return;
+    if (Date.now() >= openDateMs) return;
+
     const t = window.setInterval(() => setNow(Date.now()), 1000);
     return () => window.clearInterval(t);
-  }, [now, openDateMs]);
+  }, [openDateMs]);
 
-  // ✅ Recomendación: cuando llegue la fecha, entra solo al sitio (Home)
-  useEffect(() => {
-    if (now >= openDateMs) {
-      window.location.replace('/');
-    }
-  }, [now, openDateMs]);
-
-  const showConstruction = now < openDateMs;
-  if (showConstruction) return <UnderConstruction />;
-
+  // ✅ Loader (HOOKS SIEMPRE ARRIBA)
   const [showLoader, setShowLoader] = useState(false);
   const [fadingOut, setFadingOut] = useState(false);
 
@@ -78,6 +75,9 @@ const App: React.FC = () => {
     return () => window.clearTimeout(mainTimer);
   }, [location.pathname]);
 
+  const showConstruction = now < openDateMs;
+
+  if (showConstruction) return <UnderConstruction />;
   if (showLoader) return <LoadingScreen fadingOut={fadingOut} />;
 
   return (

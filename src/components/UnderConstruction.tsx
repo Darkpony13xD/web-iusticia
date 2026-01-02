@@ -23,8 +23,8 @@ function pad2(n: number) {
 }
 
 const UnderConstruction: React.FC = () => {
-  // 01/01/2026 00:00 CDMX (enero normalmente UTC-6)
-  const targetMs = useMemo(() => new Date("2026-01-01T00:00:00-06:00").getTime(), []);
+  // 01/03/2026 00:00 CDMX (marzo normalmente UTC-6)
+  const targetMs = useMemo(() => new Date("2026-01-03T00:00:00-06:00").getTime(), []);
   const [left, setLeft] = useState<TimeLeft>(() => getTimeLeft(targetMs));
 
   useEffect(() => {
@@ -70,7 +70,7 @@ const UnderConstruction: React.FC = () => {
           <p className="mt-3 text-white/70 leading-relaxed">
             Estamos preparando una experiencia más clara, elegante y funcional.
             <span className="text-white"> Regresamos el </span>
-            <span className="text-amber-300 font-semibold">1 de enero</span>.
+            <span className="text-amber-300 font-semibold">3 de enero</span>.
           </p>
 
           {/* Card principal */}
@@ -80,7 +80,7 @@ const UnderConstruction: React.FC = () => {
                 <div>
                   <p className="text-sm text-white/60">Cuenta regresiva</p>
                   <p className="text-xl sm:text-2xl font-semibold">
-                    Apertura: <span className="text-amber-300">01/01/2026</span>{" "}
+                    Apertura: <span className="text-amber-300">03/01/2026</span>{" "}
                     <span className="text-white/50 text-sm font-normal">(CDMX)</span>
                   </p>
                 </div>
