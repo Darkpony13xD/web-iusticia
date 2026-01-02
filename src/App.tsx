@@ -40,13 +40,14 @@ const App: React.FC = () => {
 
   const [now, setNow] = useState(() => Date.now());
 
-  // ✅ Mantener reloj (solo si aún no abre)
-  useEffect(() => {
-    if (Date.now() >= openDateMs) return;
+ // ✅ Mantener reloj (solo si aún no abre)
+useEffect(() => {
+  if (now >= openDateMs) return;
 
-    const t = window.setInterval(() => setNow(Date.now()), 1000);
-    return () => window.clearInterval(t);
-  }, [openDateMs]);
+  const t = window.setInterval(() => setNow(Date.now()), 1000);
+  return () => window.clearInterval(t);
+}, [now, openDateMs]);
+
 
   // ✅ Loader (HOOKS SIEMPRE ARRIBA)
   const [showLoader, setShowLoader] = useState(false);
