@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import LuisImg from "../assets/luis_1.jpeg";
 import IUS from "../assets/iusticia.png";
 import KAT from "../assets/katya.jpeg";
+import erika from "../assets/erika.jpg";
 
 const partners = [
   {
@@ -73,10 +74,10 @@ const associates = [
   },
   {
     id: 5,
-    name: "",
-    role: "",
-    specialty: "",
-    image: IUS,
+    name: "Lic. Consuelo Aguilar",
+    role: "Psicóloga",
+    specialty: "Especialista en Violencia de Género",
+    image: erika,
     email: "contacto@iusticia.com.mx",
   },
   {
