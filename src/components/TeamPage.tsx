@@ -8,6 +8,7 @@ import LuisImg from "../assets/luis_1.jpeg";
 import IUS from "../assets/iusticia.png";
 import KAT from "../assets/katya.jpeg";
 import erika from "../assets/erika.jpg";
+import cons from "../assets/cons.jpg";
 
 const partners = [
   {
@@ -66,27 +67,28 @@ const associates = [
   
   {
     id: 4,
-    name: "Lic. Consuelo Aguilar",
-    role: "Abogada",
-    specialty: "Justicia Penal para Adoloscentes",
-    image: IUS,
-    email: "contacto@iusticia.com.mx",
-  },
-  {
-    id: 5,
-    name: "Lic. Consuelo Aguilar",
+     name: "Lic. Erika Echeveste",
     role: "Psicóloga",
     specialty: "Especialista en Violencia de Género",
     image: erika,
     email: "contacto@iusticia.com.mx",
   },
   {
-    id: 6,
-    name: "",
+    id: 5,
+   name: "",
     role: "",
     specialty: "",
     image: IUS,
     email: "contacto@iusticia.com.mx",
+  },
+  {
+    id: 6,
+     name: "Lic. Consuelo Aguilar",
+    role: "Abogada",
+    specialty: "Justicia Penal para Adoloscentes",
+    image: cons,
+    email: "contacto@iusticia.com.mx",
+    
   },
   {
     id: 7,
