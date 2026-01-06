@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import LuisImg from "../assets/luis_1.jpeg";
 import IUS from "../assets/iusticia.png";
 import KAT from "../assets/katya.jpeg";
+import erika from "../assets/erika.jpg";
 // Si usas imágenes locales, importa aquí:
 // import luisImg from "../assets/team/luis.jpg";
 
@@ -40,11 +41,10 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Lic. Consuelo Aguilar",
-    role: "Abogada",
-    specialty: "Justicia Penal para Adoloscentes",
-    image: IUS
-      ,
+    name: "Lic. Erika Echeveste",
+    role: "Psicóloga",
+    specialty: "Especialista en Violencia de Género",
+    image: erika,
     email: "contacto@iusticia.com.mx",
   },
 ];
